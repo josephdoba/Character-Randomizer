@@ -2,7 +2,7 @@
 # Realm of Lorkhan Character Randomizer
 
 ## Overview
-The Realm of Lorkhan (RoL) Character Randomizer I created with Django to help me come up with quick ideas for hardcore permadeath playthroughs on my modded Skyrim characters. I've also find it helps me discover playstyles and combinations I wouldn't of picked otherwise... finally with a click of a button!
+The Realm of Lorkhan (RoL) Character Randomizer I created with Django to help me come up with quick ideas for hardcore permadeath playthroughs on my modded Skyrim characters. I've also find it helps me discover playstyles and combinations that delightfully get me out of my comfort zone... finally with a click of a button!
 
 ## Getting Started
 
