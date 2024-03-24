@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %} Home{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Realm of Lorkhan Character Randomizer</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Bebas Neue', Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <!-- If Bebas Neue is not installed, uncomment the line below to import it from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Realm of Lorkhan Character Randomizer</h1>
+        <button id="roll-button">Roll</button>
+        <p>Race: <span id="race">{{ character.race }}</span></p>
+        <p>Class: <span id="class">{{ character.class }}</span></p>
+        <p>Backpack: <span id="backpack">{{ character.backpack }}</span></p>
+        <p>Do you get a second class?: <span id="second_class_permission">{{ character.second_class_permission }}</span>
+        </p>
+        <p>Curses: <span id="curses">{{ character.curse }}</span></p>
+        <p>Boons (if leftover shards): <span id="boons">{{ character.boon }}</span></p>
+        <p>Standing Stone: <span id="stone">{{ character.stone }}</span></p>
+        <p>Starting Location: <span id="location">{{ character.location }}</span></p>
+        <p>Main Quest: <span id="main-quest">{{ character.main_quest }}</span></p>
+        <p>Side Quest: <span id="side-quest">{{ character.side_quest }}</span></p>
+        <p>Skills: <span id="skills">{{ character.skills|join:", " }}</span></p>
+        <!-- Add more attributes here, using the '{{ character.attribute }}' pattern -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#roll-button').click(function () {
+                console.log("The button was clicked")
+                $.ajax({
+                    url: '{% url "generate_character_ajax" %}',
+                    type: 'get',
+                    success: function (response) {
+                        $('#race').text(response.Race);
+                        $('#class').text(response.Class);
+                        $('#backpack').text(response.Backpack);
+                        $('#second_class_permission').text(response["Second Class Permission"]);
+                        $('#curses').text(response.Curses);
+                        $('#boons').text(response.Boon);
+                        $('#stone').text(response["Standing Stone"]);
+                        $('#location').text(response["Starting Location"]);
+                        $('#main-quest').text(response["Main Quest"]);
+                        $('#side-quest').text(response["Side Quest"]);
+                        $('#skills').text(response["Skills"]);
+                        // Continue for the rest of your elements...
+                    },
+                    error: function (xhr, errmsg, err) {
+                        // Handle errors
+                        console.log(xhr.status + ": " + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+{% endblock %}
