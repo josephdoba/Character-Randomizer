@@ -6,7 +6,7 @@ The Realm of Lorkhan (RoL) Character Randomizer I created with Django to help me
 
 ## Getting Started
 
-- Simply visit xxx and click roll!
+- Simply visit [> The live app <](https://realmlorkhanchargen-9469f78ddf76.herokuapp.com) and click roll!
 
 ##### Note: Requires both Dawnguard and Dragonborn DLCs.
 
