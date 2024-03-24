@@ -1,1 +1,1 @@
-web: gunicorn realmlorkhanchargen.wsgi:application
+web: gunicorn RoLRandom.wsgi:application
