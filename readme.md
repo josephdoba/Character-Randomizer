@@ -2,7 +2,7 @@
 # Modded Skyrim Character Randomizer
 
 ## Overview
-A Character Randomizer built for my own Modded Skyrim setup. Generates new starting combinations for hardcore permadeath playthroughs. I've also find it helps me discover playstyles and combinations that delightfully get me out of my comfort zone... finally with a click of a button!
+A Character Randomizer built for my own Modded Skyrim setup. Generates starting combinations of unique traits for new playthroughs. I've also find it helps me discover playstyles and combinations that delightfully get me out of my comfort zone... finally with a click of a button!
 
 ## Getting Started
 
