@@ -2,7 +2,7 @@
 # Modded Skyrim Character Randomizer
 
 ## Overview
-A Character Randomizer Built with Django for my own Modded Skyrim setup. Generates new starting combinations for hardcore permadeath playthroughs. I've also find it helps me discover playstyles and combinations that delightfully get me out of my comfort zone... finally with a click of a button!
+A Character Randomizer built for my own Modded Skyrim setup. Generates new starting combinations for hardcore permadeath playthroughs. I've also find it helps me discover playstyles and combinations that delightfully get me out of my comfort zone... finally with a click of a button!
 
 ## Getting Started
 
@@ -39,10 +39,10 @@ A Character Randomizer Built with Django for my own Modded Skyrim setup. Generat
     Glenmoril
 
 ###### Planned / Considered implementations:
-    - Allow users to upload their own modlist and use to randomize said quests.
-    - Allow users to set how many skills, quests, and other details with the calculations.
-    - Bug Fixes (ie, this can random conflicting questlines in its current state).
-    - Potentially expand this to other alternative starting mods.
+    Allow users to upload their own modlist and use to randomize said quests.
+    Allow users to set how many skills, quests, and other details with the calculations.
+    Bug Fixes (ie, this can random conflicting questlines in its current state).
+    Potentially expand this to other alternative starting mods.
     
 
 ### Misc:
